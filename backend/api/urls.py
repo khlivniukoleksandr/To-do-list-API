@@ -7,7 +7,7 @@ app_name = 'tasks'
 
 router = DefaultRouter()
 
-router.register('', ToDoList)
+router.register('', ToDoList, basename='tasks')
 
 urlpatterns = [
     path('', include(router.urls)),
