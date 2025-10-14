@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "user",
     "api",
+
 ]
 
 AUTH_USER_MODEL = "user.User"

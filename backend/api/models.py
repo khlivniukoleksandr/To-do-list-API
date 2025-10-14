@@ -7,8 +7,8 @@ class Task(models.Model):
         ("completed", "Completed"),
     ]
 
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, )
     description = models.TextField(null=True, blank=True)
     due_date = models.DateField(null=True, blank=True)
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default="PENDING")
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default="pending")
 
