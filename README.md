@@ -1,45 +1,30 @@
 # To-do-list-API
 
-Завдання: 
-Розробка API для керування списком завдань (To-Do List)
+## API для керування списком завдань (To-Do List)
 
-Мета:
-Створити RESTful API для керування списком завдань із використанням будь-якого зручного фреймворку (наприклад, Django REST Framework, Express.js, Spring Boot тощо).
 
-Функціональні вимоги:
- 1. Створити завдання
- • Метод: POST /tasks
- • Поля:
- • title (обов’язкове, строка)
- • description (необов’язкове, строка)
- • due_date (необов’язкове, дата)
- • status (за замовчуванням: “pending”, значення: “pending”, “in-progress”, “completed”).
- 2. Отримати список завдань
- • Метод: GET /tasks
- • Фільтрування:
- • За статусом (status)
- • За дедлайном (due_date).
- 3. Оновити завдання
- • Метод: PUT /tasks/{id}
- • Можливість змінити будь-яке поле завдання.
- 4. Видалити завдання
- • Метод: DELETE /tasks/{id}.
+## Installing using GitHub
+### Requirements
+Before you begin, make sure you have the following installed:
 
-++
+- Docker
+- Docker Compose
+- Git
+- Pycharm Pro
 
-Нефункціональні вимоги:
- • Використовувати реляційну базу даних (наприклад, PostgreSQL, MySQL).
- • Обов’язкове логування всіх запитів.
- • Код має бути структурованим, із використанням принципів “чистого коду”.
- • Використання Git із мінімум двома комітами: перший — початкове налаштування, другий — виконання завдання.
+## How to run
 
-Додатково (опціонально):
- • Реалізувати аутентифікацію через токени (наприклад, JWT).
- • Додати тестування основних ендпоінтів (unit або integration tests).
+ - Clone repository
+ - change directory to backend `cd backend`
+ - install all packages `pip install requirements.txt` 
+ - Create database PostgreSQL `createdb train_station_db`
+ - Create .env file like .env.sample
+ - Run migrations `python manage.py makemigrations`
+ - run server and open localhost
 
-Очікуваний результат:
- • Репозиторій із кодом (GitHub, GitLab або інший).
- • Інструкція для запуску проекту (README.md), що включає:
- • Команди для встановлення залежностей.
- • Як запустити сервер.
- • Як протестувати API.
+## Run with Docker
+
+- Run Docker-compose `docker-compose up --build`
+
+## API Documentation
+ - Swagger is available at: api/doc/swagger/

@@ -1,10 +1,55 @@
-<!DOCTYPE html>
+{% load static %}
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <title>To Do List API Home</title>
 </head>
 <body>
-$END$
+<header class="header">
+        <div class="header-container">
+            <div class="logo">
+              <a href="/">To Do List</a>
+            </div>
+        </div>
+    </header>
+<h1 class="my-tasks-title">My Tasks</h1>
+<div class="task-filter" style="margin-left:auto;margin-right:40px">
+  <label for="status-filter">Status:</label>
+  <select id="status-filter">
+    <option value="all">All</option>
+    <option value="pending">Pending</option>
+    <option value="in-progress">In progress</option>
+    <option value="completed">Completed</option>
+  </select>
+</div>
+    <main class="main-content-tasks">
+
+      <ul class="task-list"></ul>
+
+      <div class="add-task-form">
+        <form id="task-form">
+          <input type="text" name="title" placeholder="Task Name">
+          <input type="text" name="description" placeholder="Description">
+          <select name="status">
+            <option value="pending">Pending</option>
+            <option value="in-progress">In progress</option>
+            <option value="completed">Completed</option>
+          </select>
+          <input type="date" name="due_date">
+        <button type="submit">Add</button>
+
+      </form>
+
+      </div>
+    </main>
+
+{% load static %}
+<script src="{% static 'js/main.js' %}"></script>
+
 </body>
 </html>
